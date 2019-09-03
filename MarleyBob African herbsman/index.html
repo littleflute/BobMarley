@@ -1,0 +1,85 @@
+<!DOCTYPE html>	  
+<html>  
+<body> 
+<script src="https://www.w3schools.com/lib/w3.js"></script>				
+<script src="https://littleflute.github.io/JavaScript/blclass.js"></script>		
+<script src="https://littleflute.github.io/JavaScript/blApp.js"></script>		
+<div id="id_div_mp4i_bat_info" >								
+<a target="_blank" href="https://github.com/littleflute/bat/edit/master/bat/mp4index/mp4i.bat">v1.3. 21 * </a>	
+<a href="..">[..]</a> <button id="id_btn_4_blApp">+++++++++++blApp+++++++++</button>	
+</div>						 
+<div id="DivCurTime"></div> 			
+<br>  
+<div id="DivButtons"> 				
+<button onclick="play('African Herbsman.mp3')">1:African Herbsman.mp3</button> 
+<button onclick="play('All In One (Medley, Part 1).mp3')">2:All In One (Medley, Part 1).mp3</button> 
+<button onclick="play('Brain Washing.mp3')">3:Brain Washing.mp3</button> 
+<button onclick="play('Copasetic.mp3')">4:Copasetic.mp3</button> 
+<button onclick="play('Don't Rock the Boat.mp3')">5:Don't Rock the Boat.mp3</button> 
+<button onclick="play('Duppy Conqueror.mp3')">6:Duppy Conqueror.mp3</button> 
+<button onclick="play('Four Hundred Years.mp3')">7:Four Hundred Years.mp3</button> 
+<button onclick="play('Fussing and Fighting.mp3')">8:Fussing and Fighting.mp3</button> 
+<button onclick="play('Grooving Kingston 12 (Trench Town Rock Version).mp3')">9:Grooving Kingston 12 (Trench Town Rock Version).mp3</button> 
+<button onclick="play('Kaya (Version 2).mp3')">10:Kaya (Version 2).mp3</button> 
+<br> 
+<button onclick="play('Kaya.mp3')">11:Kaya.mp3</button> 
+<button onclick="play('Keep On Moving.mp3')">12:Keep On Moving.mp3</button> 
+<button onclick="play('Keep On Skanking.mp3')">13:Keep On Skanking.mp3</button> 
+<button onclick="play('Live (Lively Up Yourself Version).mp3')">14:Live (Lively Up Yourself Version).mp3</button> 
+<button onclick="play('Lively Up Yourself.mp3')">15:Lively Up Yourself.mp3</button> 
+<button onclick="play('Memphis (Dub Version).mp3')">16:Memphis (Dub Version).mp3</button> 
+<button onclick="play('More Axe.mp3')">17:More Axe.mp3</button> 
+<button onclick="play('Moving Version (DJ Version).mp3')">18:Moving Version (DJ Version).mp3</button> 
+<button onclick="play('Put It On.mp3')">19:Put It On.mp3</button> 
+<button onclick="play('Riding High.mp3')">20:Riding High.mp3</button> 
+<br> 
+<button onclick="play('Small Axe.mp3')">21:Small Axe.mp3</button> 
+<button onclick="play('Stand Alone.mp3')">22:Stand Alone.mp3</button> 
+<button onclick="play('Sun Is Shining.mp3')">23:Sun Is Shining.mp3</button> 
+<button onclick="play('The Axe Man (Small Axe Version).mp3')">24:The Axe Man (Small Axe Version).mp3</button> 
+<button onclick="play('Trenchtown Rock.mp3')">25:Trenchtown Rock.mp3</button> 
+<button onclick="play('Zig Zag (Duppy Conqueror Version).mp3')">26:Zig Zag (Duppy Conqueror Version).mp3</button> 
+ </div> 			
+<br> 	
+<div id="id_div_4_gif" style="border:1px solid green;" >				
+</div> 									
+<br> 	
+<div id="id_div_4_jpg" style="border:1px solid blue;" >				
+</div> 									
+<br> 	
+<div id="id_div_4_png" style="border:1px solid blue;" >				
+</div> 								 
+<br> 	
+<div id="id_div_4_lrcJS" style="border:1px solid red;display: none;" >		
+</div> 								
+<script>  
+var str4V = '<video id="myVideo" width="720" height="480" controls> ';				
+str4V += '<source src="v1.mp4" type="video/mp4">Your browser does not support HTML5 video.'; 	
+str4V += '</video>';  										
+var md4v = blo0.blMDiv(document.body,"id_mdiv_4_myVideo" , str4V , 300,100,500,400,blColor[1]); 	
+var vid = document.getElementById("myVideo"); 
+function play(i) {
+    vid.src=i; 
+    vid.load();
+    vid.play(); 
+}
+function getCurTime() {  
+   document.getElementById("DivCurTime").innerHTML= vid.currentTime; 
+}   
+function setCurTime(t) { 
+   vid.currentTime=t;  
+   getCurTime();
+}  
+function moveMS(ms) { 
+  vid.currentTime+=ms;
+  getCurTime();  
+}   
+var _loadScript = function (id,src){					
+var	r = document.createElement("script");				
+r.id = id;								
+r.src = src; 								
+document.body.appendChild(r);						
+}									
+_loadScript ("id_script_plx","plx.js");				
+</script> 
+</body> 
