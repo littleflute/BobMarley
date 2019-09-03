@@ -1,0 +1,81 @@
+<!DOCTYPE html>	  
+<html>  
+<body> 
+<script src="https://www.w3schools.com/lib/w3.js"></script>				
+<script src="https://littleflute.github.io/JavaScript/blclass.js"></script>		
+<script src="https://littleflute.github.io/JavaScript/blApp.js"></script>		
+<div id="id_div_mp4i_bat_info" >								
+<a target="_blank" href="https://github.com/littleflute/bat/edit/master/bat/mp4index/mp4i.bat">v1.3. 21 * </a>	
+<a href="..">[..]</a> <button id="id_btn_4_blApp">+++++++++++blApp+++++++++</button>	
+</div>						 
+<div id="DivCurTime"></div> 			
+<br>  
+<div id="DivButtons"> 				
+<button onclick="play('01 Destiny [-][Original Version].mp3')">1:01 Destiny [-][Original Version].mp3</button> 
+<button onclick="play('02 Wages of Love [-][Alternate Take].mp3')">2:02 Wages of Love [-][Alternate Take].mp3</button> 
+<button onclick="play('03 Do You Feel the Same Way Too [Original Release Version Without Overdub].mp3')">3:03 Do You Feel the Same Way Too [Original Release Version Without Overdub].mp3</button> 
+<button onclick="play('04 Your Love [Not on CD].mp3')">4:04 Your Love [Not on CD].mp3</button> 
+<button onclick="play('05 Don't Ever Leave Me [-][Alternate Take][Take 1].mp3')">5:05 Don't Ever Leave Me [-][Alternate Take][Take 1].mp3</button> 
+<button onclick="play('06 Don't Ever Leave Me [-][Alternate Take][Take 2].mp3')">6:06 Don't Ever Leave Me [-][Alternate Take][Take 2].mp3</button> 
+<button onclick="play('07 I Need You [Not on CD].mp3')">7:07 I Need You [Not on CD].mp3</button> 
+<button onclick="play('08 Rock Sweet Rock [Not on CD].mp3')">8:08 Rock Sweet Rock [Not on CD].mp3</button> 
+<button onclick="play('09 Another Dance [-][Original Version].mp3')">9:09 Another Dance [-][Original Version].mp3</button> 
+<button onclick="play('10 I Stand Predominate [Not on CD].mp3')">10:10 I Stand Predominate [Not on CD].mp3</button> 
+<br> 
+<button onclick="play('11 Where Is My Mother [#][Acoustic Version][Demo Version].mp3')">11:11 Where Is My Mother [#][Acoustic Version][Demo Version].mp3</button> 
+<button onclick="play('12 Where Is My Mother [Not on CD][Take].mp3')">12:12 Where Is My Mother [Not on CD][Take].mp3</button> 
+<button onclick="play('13 Dance With Me [Not on CD].mp3')">13:13 Dance With Me [Not on CD].mp3</button> 
+<button onclick="play('14 What's New Pussycat-.mp3')">14:14 What's New Pussycat-.mp3</button> 
+<button onclick="play('15 Treat Me Good.mp3')">15:15 Treat Me Good.mp3</button> 
+<button onclick="play('16 Jerking Time (A.K.A. Jerk in Time) [Not on CD].mp3')">16:16 Jerking Time (A.K.A. Jerk in Time) [Not on CD].mp3</button> 
+<button onclick="play('17 Do It Right [Not on CD].mp3')">17:17 Do It Right [Not on CD].mp3</button> 
+<button onclick="play('18 Let the Lord Be Seen in You [Not on CD].mp3')">18:18 Let the Lord Be Seen in You [Not on CD].mp3</button> 
+<button onclick="play('19 White Christmas [Not on CD].mp3')">19:19 White Christmas [Not on CD].mp3</button> 
+ </div> 			
+<br> 	
+<div id="id_div_4_gif" style="border:1px solid green;" >				
+</div> 									
+<br> 	
+<div id="id_div_4_jpg" style="border:1px solid blue;" >				
+AlbumArtSmall.jpg, 
+AlbumArt_{2560A9A5-A442-4CB2-B41E-8F2FF3169E17}_Large.jpg, 
+AlbumArt_{2560A9A5-A442-4CB2-B41E-8F2FF3169E17}_Small.jpg, 
+Folder.jpg, 
+</div> 									
+<br> 	
+<div id="id_div_4_png" style="border:1px solid blue;" >				
+</div> 								 
+<br> 	
+<div id="id_div_4_lrcJS" style="border:1px solid red;display: none;" >		
+</div> 								
+<script>  
+var str4V = '<video id="myVideo" width="720" height="480" controls> ';				
+str4V += '<source src="v1.mp4" type="video/mp4">Your browser does not support HTML5 video.'; 	
+str4V += '</video>';  										
+var md4v = blo0.blMDiv(document.body,"id_mdiv_4_myVideo" , str4V , 300,100,500,400,blColor[1]); 	
+var vid = document.getElementById("myVideo"); 
+function play(i) {
+    vid.src=i; 
+    vid.load();
+    vid.play(); 
+}
+function getCurTime() {  
+   document.getElementById("DivCurTime").innerHTML= vid.currentTime; 
+}   
+function setCurTime(t) { 
+   vid.currentTime=t;  
+   getCurTime();
+}  
+function moveMS(ms) { 
+  vid.currentTime+=ms;
+  getCurTime();  
+}   
+var _loadScript = function (id,src){					
+var	r = document.createElement("script");				
+r.id = id;								
+r.src = src; 								
+document.body.appendChild(r);						
+}									
+_loadScript ("id_script_plx","plx.js");				
+</script> 
+</body> 
